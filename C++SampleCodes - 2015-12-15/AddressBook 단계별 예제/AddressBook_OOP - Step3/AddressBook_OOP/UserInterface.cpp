@@ -22,11 +22,10 @@ void CUserInterface::Add(void)
 
 	printf("Input name : ");
 	fflush(stdin);
-	gets_s(szName, sizeof(szName));
+	cin >> szName;
 
 	printf("Input phone number : ");
-	fflush(stdin);
-	gets_s(szPhone, sizeof(szPhone));
+	cin >> szPhone;
 
 	int nResult = m_List.AddNewNode( new CUserData(szName, szPhone) );
 	if(nResult == 0)
